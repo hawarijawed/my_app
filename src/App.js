@@ -1,12 +1,12 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-import About from "./MyComponents/About";
+// import About from "./MyComponents/About";
 import Alert from "./MyComponents/Alert";
 import Navbar from "./MyComponents/Navbar";
 import TextForm from "./MyComponents/TextForms";
 import React,{ useState } from "react";
-import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+// import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'; Not used because it is not supported on github pages
 
 function App()
 {
@@ -41,23 +41,23 @@ function App()
   }
   return(
     <>
-    <Router>
+    {/* <Router> */}
         <Navbar title="TextUtils" description="About Us"  mode = {mode} toggleMode = {toggleMode}/>
         <Alert alert={alert}/>
           <div className="container my-3">  {/*my-3 means margin in Y-axis*/}
-            {/* <TextForm heading="Text Case Converter" mode={mode} showAlert={showAlert}/> */}
+            <TextForm heading="Text Case Converter" mode={mode} showAlert={showAlert}/>
           {/* <About/> */}
           
             {/*
             It is a good idea to use exact keyword in react to avoid partial matching.
             */}
-          <Routes>
-            <Route exact path="/about" element={<About/>}/>
-            <Route exact path="/" element={<TextForm heading="Text Case Converter" mode={mode} showAlert={showAlert}/>}/>
-          </Routes>
+          {/* <Routes> */}
+            {/* <Route exact path="/about" element={<About/>}/>
+            <Route exact path="/" element={<TextForm heading="Text Case Converter" mode={mode} showAlert={showAlert}/>}/> */}
+          {/* </Routes> */}
           
           </div>
-    </Router>
+    {/* </Router> */}
     </>
   );
 }
